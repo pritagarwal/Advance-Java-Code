@@ -6,11 +6,18 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
 import in.ineuron.bo.CustomerBO;
 
+@Repository(value="dao")
 public class CustomerMySQLDAOImpl implements ICustomerDAO {
 
+	@Autowired
 	private DataSource dataSource;
+	
 	private static final String REALTIMEDI_CUSTOMER_INSERT_QUERY = "insert into customer(`cname`,`caddress`,`pamt`,`rate`,`time`,`intrAmt`)values(?,?,?,?,?,?)";
 	CustomerMySQLDAOImpl(DataSource dataSource) {
 		this.dataSource = dataSource;

@@ -1,5 +1,8 @@
 package in.ineuron.bo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class CustomerBO {
 
 	private String customerName;

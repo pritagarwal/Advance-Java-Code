@@ -1,10 +1,15 @@
 package in.ineuron.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import in.ineuron.dto.CustomerDTO;
 import in.ineuron.service.ICustomerMgmntService;
 import in.ineuron.vo.CustomerVO;
 
+@Component(value="customerController")
 public class MainController {
+	@Autowired
 	private ICustomerMgmntService service;
 
 	public MainController(ICustomerMgmntService service) {

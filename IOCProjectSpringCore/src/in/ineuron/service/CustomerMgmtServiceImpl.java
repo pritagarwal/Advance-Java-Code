@@ -1,11 +1,17 @@
 package in.ineuron.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import in.ineuron.bo.CustomerBO;
 import in.ineuron.dao.ICustomerDAO;
 import in.ineuron.dto.CustomerDTO;
 
+@Service(value="service")
 public class CustomerMgmtServiceImpl implements ICustomerMgmntService {
 
+	@Autowired
 	private ICustomerDAO dao;
 
 	public CustomerMgmtServiceImpl(ICustomerDAO dao) {

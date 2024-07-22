@@ -1,5 +1,8 @@
 package in.ineuron.dto;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class CustomerDTO {
 	private String customerName;
 	private String customerAddress;

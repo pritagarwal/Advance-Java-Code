@@ -11,7 +11,7 @@
 	<!-- Setter Injection to get DataSource Object -->
 	<bean id="mysqlDAO"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-		scope="singleton">
+		scope="singleton" >
 		<property name="driverClassName"
 			value="${jdbc.driverClassName}" />
 		<property name="url" value="${jdbc.url}" />
@@ -19,10 +19,7 @@
 		<property name="password" value="${jdbc.password}" />
 	</bean>
 	
-	<!-- Constructor Injection inside DAO layer -->
-	<bean id="customerDao" class="in.ineuron.dao.CustomerMySQLDAOImpl" scope="singleton">
-			<constructor-arg name="dataSource" ref="mysqlDAO"/>
-	</bean>
+
 	
 	<context:property-placeholder
 		location="in/ineuron/commons/application.properties" />

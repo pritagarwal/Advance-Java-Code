@@ -1,5 +1,8 @@
 package in.ineuron.vo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class CustomerVO {
 	
 	private String customerName;

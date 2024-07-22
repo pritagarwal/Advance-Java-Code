@@ -7,12 +7,12 @@
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
 
+
+	<import resource="persistence-beans.xml"/>
 	
-	<import resource="service-beans.xml"/>
-	
-	<!-- Constructor Injection inside Controller layer -->
-	<bean id="customerController" class="in.ineuron.controller.MainController" scope="singleton">
-		<constructor-arg name="service" ref="customerService"/>
+	<!-- Constructor Injection inside Service layer -->
+	<bean id="emloyeeService" class="in.ineuron.service.EmployeeServiceImpl" scope="singleton">
+		<constructor-arg name="dao" ref="employeeDao"/>
 	</bean>
 	
 	
