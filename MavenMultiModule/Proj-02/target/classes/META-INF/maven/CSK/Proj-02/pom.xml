@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>MavenMultiModule</artifactId>
+		<groupId>ineuron</groupId>
+		<version>1.0</version>
+		    <relativePath>../pom.xml</relativePath>
+	</parent>
 
-	<groupId>ineuron</groupId>
-	<artifactId>MavenProject-01</artifactId>
+	<groupId>CSK</groupId>
+	<artifactId>Proj-02</artifactId>
 	<version>1.0</version>
-	<packaging>pom</packaging>
 
-	<name>MavenProject-01</name>
+	<name>Proj-02</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -25,18 +29,17 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
-			<scope>test</scope>
+			
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
-<dependency>
-    <groupId>com.mysql</groupId>
-    <artifactId>mysql-connector-j</artifactId>
-    <version>8.0.32</version>
-</dependency>
-
+		
+		<dependency>
+			<groupId>KKR</groupId>
+			<artifactId>Proj-01</artifactId>
+			<version>1.0</version>
+		</dependency>
 		
 	</dependencies>
-
+	
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
 			defaults (may be moved to parent pom) -->
@@ -83,15 +86,13 @@
 					<artifactId>maven-project-info-reports-plugin</artifactId>
 					<version>3.0.0</version>
 				</plugin>
-
-
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>exec-maven-plugin</artifactId>
 					<version>3.1.0</version>
 					<executions>
 						<execution>
-							<id>MavenProject-01</id>
+							<id>Proj-02</id>
 							<phase>package</phase>
 							<goals>
 								<goal>java</goal>
@@ -99,11 +100,9 @@
 						</execution>
 					</executions>
 					<configuration>
-						<mainClass>in.ineuron.BootProject01SpringBootJdbcApplication</mainClass>
+						<mainClass>in.csk.App2</mainClass>
 					</configuration>
 				</plugin>
-
-
 			</plugins>
 		</pluginManagement>
 	</build>
